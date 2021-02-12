@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{buildGraph}\PYG{p}{(}\PYG{n}{bias}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{reg}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{b1}\PYG{o}{=}\PYG{l+m+mf}{0.9}\PYG{p}{,} \PYG{n}{b2}\PYG{o}{=}\PYG{l+m+mf}{0.999}\PYG{p}{,} \PYG{n}{eps}\PYG{o}{=}\PYG{l+m+mf}{1e\PYGZhy{}08}\PYG{p}{):}
+
+  \PYG{c+c1}{\PYGZsh{} Make the weight and bias TF variables}
+  \PYG{n}{W} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Variable}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{truncated\PYGZus{}normal}\PYG{p}{(}\PYG{n}{shape}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{784}\PYG{p}{),} \PYG{n}{stddev}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{,}
+    \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{),} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}weights\PYGZdq{}}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+  \PYG{n}{b} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Variable}\PYG{p}{(}\PYG{n}{bias}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}bias\PYGZdq{}}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Data, labels, and lambda}
+  \PYG{n}{data} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{placeholder}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{,} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{l+m+mi}{784}\PYG{p}{),} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{labels} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{placeholder}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{,} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}labels\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{lmbda} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{constant}\PYG{p}{(}\PYG{n}{reg}\PYG{p}{,} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}lambda\PYGZdq{}}\PYG{p}{)}
+
+  \PYG{n}{valid\PYGZus{}data} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{placeholder}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{,} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{l+m+mi}{784}\PYG{p}{),}
+    \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}validdata\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{valid\PYGZus{}label} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{placeholder}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{,} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),}
+    \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}validlabels\PYGZdq{}}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat = XWT (None, 784)()}
+  \PYG{n}{y\PYGZus{}hat} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{data}\PYG{p}{,} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{W}\PYG{p}{))} \PYG{o}{+} \PYG{n}{b}
+
+  \PYG{c+c1}{\PYGZsh{} Regularization term}
+  \PYG{n}{regularization} \PYG{o}{=} \PYG{p}{(}\PYG{n}{lmbda} \PYG{o}{/} \PYG{l+m+mf}{2.0}\PYG{p}{)} \PYG{o}{*} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{W}\PYG{p}{))}
+
+  \PYG{c+c1}{\PYGZsh{} Loss tensor: cross entropy loss of X and the regularization term.}
+  \PYG{c+c1}{\PYGZsh{} Sigmoid corss entropy will return a vector so to make it a}
+  \PYG{c+c1}{\PYGZsh{} single element add up all the elements using tf.reduce\PYGZus{}sum}
+  \PYG{n}{ce\PYGZus{}loss} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}sum}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{losses}\PYG{o}{.}\PYG{n}{sigmoid\PYGZus{}cross\PYGZus{}entropy}\PYG{p}{(}
+    \PYG{n}{multi\PYGZus{}class\PYGZus{}labels}\PYG{o}{=}\PYG{n}{labels}\PYG{p}{,} \PYG{n}{logits}\PYG{o}{=}\PYG{n}{y\PYGZus{}hat}\PYG{p}{))}
+  \PYG{n}{ce\PYGZus{}loss} \PYG{o}{+=} \PYG{n}{regularization}
+
+  \PYG{c+c1}{\PYGZsh{} Adam optimizer, and tell it to minimize our loss function}
+  \PYG{n}{optim} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{train}\PYG{o}{.}\PYG{n}{AdamOptimizer}\PYG{p}{(}\PYG{n}{learning\PYGZus{}rate}\PYG{o}{=}\PYG{l+m+mf}{0.001}\PYG{p}{,}
+    \PYG{n}{beta1}\PYG{o}{=}\PYG{n}{b1}\PYG{p}{,} \PYG{n}{beta2}\PYG{o}{=}\PYG{n}{b2}\PYG{p}{,} \PYG{n}{epsilon}\PYG{o}{=}\PYG{n}{eps}\PYG{p}{)}
+  \PYG{n}{optim} \PYG{o}{=} \PYG{n}{optim}\PYG{o}{.}\PYG{n}{minimize}\PYG{p}{(}\PYG{n}{loss}\PYG{o}{=}\PYG{n}{ce\PYGZus{}loss}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Also calculate the validation loss}
+  \PYG{n}{valid\PYGZus{}y\PYGZus{}hat} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{valid\PYGZus{}data}\PYG{p}{,} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{W}\PYG{p}{))} \PYG{o}{+} \PYG{n}{b}
+  \PYG{n}{valid\PYGZus{}ce\PYGZus{}loss} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}sum}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{losses}\PYG{o}{.}\PYG{n}{sigmoid\PYGZus{}cross\PYGZus{}entropy}\PYG{p}{(}
+    \PYG{n}{multi\PYGZus{}class\PYGZus{}labels}\PYG{o}{=}\PYG{n}{valid\PYGZus{}label}\PYG{p}{,} \PYG{n}{logits}\PYG{o}{=}\PYG{n}{valid\PYGZus{}y\PYGZus{}hat}\PYG{p}{))}
+  \PYG{n}{valid\PYGZus{}ce\PYGZus{}loss} \PYG{o}{+=} \PYG{n}{regularization}
+
+  \PYG{k}{return} \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{data}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat}\PYG{p}{,} \PYG{n}{labels}\PYG{p}{,} \PYG{n}{ce\PYGZus{}loss}\PYG{p}{,} \PYG{n}{optim}\PYG{p}{,} \PYG{n}{regularization}\PYG{p}{,}
+    \PYG{n}{valid\PYGZus{}ce\PYGZus{}loss}\PYG{p}{,} \PYG{n}{valid\PYGZus{}data}\PYG{p}{,} \PYG{n}{valid\PYGZus{}label}
+\end{Verbatim}

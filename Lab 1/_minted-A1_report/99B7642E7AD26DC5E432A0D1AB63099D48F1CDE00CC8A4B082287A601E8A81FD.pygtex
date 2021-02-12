@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{loss}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} X is a data matrix of 3500 x 28 x 28}
+    \PYG{c+c1}{\PYGZsh{} So flatten it such that the dimensions is now 3500 x 784}
+    \PYG{n}{X\PYGZus{}processed} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{p}{(}\PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{*} \PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]))}
+
+    \PYG{c+c1}{\PYGZsh{} ||w||\PYGZca{}2\PYGZus{}2  = wTw = sqrt(w\PYGZus{}1\PYGZca{}2 + w\PYGZus{}2\PYGZca{}2 ... w\PYGZus{}d\PYGZca{}2)\PYGZca{}2}
+    \PYG{n}{regularization} \PYG{o}{=} \PYG{p}{(}\PYG{n}{reg}\PYG{o}{/}\PYG{l+m+mf}{2.0}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n}{W}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}
+
+    \PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat = O(wT * x + b) =\PYGZgt{} O(X * w + b), where X is te data matrix}
+    \PYG{n}{y\PYGZus{}hat} \PYG{o}{=} \PYG{l+m+mf}{1.0} \PYG{o}{/} \PYG{p}{(}\PYG{l+m+mf}{1.0} \PYG{o}{+} \PYG{n}{np}\PYG{o}{.}\PYG{n}{exp}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{p}{(} \PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{X\PYGZus{}processed}\PYG{p}{,} \PYG{n}{W}\PYG{p}{))} \PYG{o}{+} \PYG{n}{b}\PYG{p}{)))}
+
+    \PYG{c+c1}{\PYGZsh{} Sum over all y with the given y\PYGZus{}hat then divide}
+    \PYG{c+c1}{\PYGZsh{} by the number of rows of y}
+    \PYG{c+c1}{\PYGZsh{} which is the same as the number of samples}
+    \PYG{n+nb}{sum} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{(}\PYG{n}{y} \PYG{o}{*} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{n}{y\PYGZus{}hat}\PYG{p}{))}
+        \PYG{o}{\PYGZhy{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{multiply}\PYG{p}{((}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{n}{y}\PYG{p}{),} \PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{n}{y\PYGZus{}hat}\PYG{p}{)))} \PYG{o}{/} \PYG{p}{(}\PYG{n}{y}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+
+    \PYG{k}{return} \PYG{n+nb}{sum} \PYG{o}{+} \PYG{n}{regularization}
+\end{Verbatim}

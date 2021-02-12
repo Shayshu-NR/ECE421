@@ -1,0 +1,60 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{grad\PYGZus{}descent}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{alpha}\PYG{p}{,} \PYG{n}{epochs}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{,} \PYG{n}{error\PYGZus{}tol}\PYG{p}{,} \PYG{n}{valData}\PYG{p}{,} \PYG{n}{valTarget}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} Assume that the weights are already properly initialized}
+  \PYG{n}{train\PYGZus{}ce\PYGZus{}loss} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{val\PYGZus{}ce\PYGZus{}loss} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{train\PYGZus{}acc} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{val\PYGZus{}acc} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{W\PYGZus{}old} \PYG{o}{=} \PYG{n}{W}
+
+  \PYG{k}{for} \PYG{n}{iteration} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{epochs}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} Compute gradient g\PYGZus{}t}
+    \PYG{n}{grad\PYGZus{}wrt\PYGZus{}w}\PYG{p}{,} \PYG{n}{grad\PYGZus{}wrt\PYGZus{}b} \PYG{o}{=} \PYG{n}{grad\PYGZus{}loss}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Update the weights}
+    \PYG{n}{W} \PYG{o}{=} \PYG{n}{W} \PYG{o}{\PYGZhy{}} \PYG{n}{alpha} \PYG{o}{*} \PYG{n}{grad\PYGZus{}wrt\PYGZus{}w}
+
+    \PYG{c+c1}{\PYGZsh{} Update the bias term}
+    \PYG{n}{b} \PYG{o}{=} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{alpha} \PYG{o}{*} \PYG{n}{grad\PYGZus{}wrt\PYGZus{}b}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate the cross entropy loss for training and validation}
+    \PYG{n}{cross\PYGZus{}entropy\PYGZus{}loss} \PYG{o}{=} \PYG{n}{loss}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{valData}\PYG{p}{,} \PYG{n}{valTarget}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{)}
+    \PYG{n}{val\PYGZus{}ce\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{cross\PYGZus{}entropy\PYGZus{}loss}\PYG{p}{)}
+
+    \PYG{n}{cross\PYGZus{}entropy\PYGZus{}loss} \PYG{o}{=} \PYG{n}{loss}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{)}
+    \PYG{n}{train\PYGZus{}ce\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{cross\PYGZus{}entropy\PYGZus{}loss}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate the accuracy for training and validation}
+    \PYG{n}{acc} \PYG{o}{=} \PYG{n}{accuracy}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{)}
+    \PYG{n}{train\PYGZus{}acc}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{acc}\PYG{p}{)}
+
+    \PYG{n}{acc} \PYG{o}{=} \PYG{n}{accuracy}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{valData}\PYG{p}{,} \PYG{n}{valTarget}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{)}
+    \PYG{n}{val\PYGZus{}acc}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{acc}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Break if under error tollerance}
+    \PYG{k}{if} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n}{W\PYGZus{}old} \PYG{o}{\PYGZhy{}} \PYG{n}{W}\PYG{p}{)} \PYG{o}{\PYGZlt{}=} \PYG{n}{error\PYGZus{}tol}\PYG{p}{:}
+      \PYG{k}{break}
+
+  \PYG{c+c1}{\PYGZsh{} Plot the}
+  \PYG{n}{train\PYGZus{}plt} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{train\PYGZus{}ce\PYGZus{}loss}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Training\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{val\PYGZus{}plt} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{val\PYGZus{}ce\PYGZus{}loss}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Validation\PYGZsq{}}\PYG{p}{)}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Cross Entropy loss over epochs with alpha = \PYGZdq{}}
+    \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}, lambda = \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{reg}\PYG{p}{))}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Epoch\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Loss\PYGZdq{}}\PYG{p}{)}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{train\PYGZus{}acc}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Training\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{val\PYGZus{}acc}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Validation\PYGZsq{}}\PYG{p}{)}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Accuracy over epochs with alpha = \PYGZdq{}}
+    \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{alpha}\PYG{p}{)}\PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}, lambda = \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{reg}\PYG{p}{))}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+  \PYG{k}{return} \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}
+\end{Verbatim}

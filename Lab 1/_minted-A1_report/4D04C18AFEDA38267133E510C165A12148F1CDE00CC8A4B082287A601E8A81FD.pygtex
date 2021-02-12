@@ -1,0 +1,111 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{train\PYGZus{}model}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{,} \PYG{n}{epochs}\PYG{p}{,} \PYG{n}{batch\PYGZus{}size}\PYG{p}{,} \PYG{n}{learning\PYGZus{}rate}\PYG{p}{,} \PYG{n}{bias}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}
+  \PYG{n}{reg}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{b1}\PYG{o}{=}\PYG{l+m+mf}{0.9}\PYG{p}{,} \PYG{n}{b2}\PYG{o}{=}\PYG{l+m+mf}{0.999}\PYG{p}{,} \PYG{n}{eps}\PYG{o}{=}\PYG{l+m+mf}{1e\PYGZhy{}08}\PYG{p}{):}
+
+  \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reset\PYGZus{}default\PYGZus{}graph}\PYG{p}{()}
+  \PYG{n}{train\PYGZus{}ERROR} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{train\PYGZus{}ACCURACY} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{valid\PYGZus{}ERROR} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{valid\PYGZus{}ACCURACY} \PYG{o}{=} \PYG{p}{[]}
+
+  \PYG{c+c1}{\PYGZsh{} Get the place holders, etc... for the weights, bias...}
+  \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{data}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat}\PYG{p}{,} \PYG{n}{labels}\PYG{p}{,} \PYG{n}{ce\PYGZus{}loss}\PYG{p}{,} \PYG{n}{optim}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{,} \PYG{n}{valid\PYGZus{}ce\PYGZus{}loss}\PYG{p}{,}
+    \PYG{n}{valid\PYGZus{}data}\PYG{p}{,} \PYG{n}{valid\PYGZus{}label} \PYG{o}{=} \PYG{n}{buildGraph}\PYG{p}{(}\PYG{n}{bias}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{,} \PYG{n}{b1}\PYG{p}{,} \PYG{n}{b2}\PYG{p}{,} \PYG{n}{eps}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Create a node to initialize all varibles of the graph}
+  \PYG{n}{init\PYGZus{}op} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{global\PYGZus{}variables\PYGZus{}initializer}\PYG{p}{()}
+
+  \PYG{c+c1}{\PYGZsh{} Set a random uniform seed}
+  \PYG{n}{tf}\PYG{o}{.}\PYG{n}{set\PYGZus{}random\PYGZus{}seed}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Format the input data into a 1D vector, new shape should be:}
+  \PYG{c+c1}{\PYGZsh{} (3500, 28, 28) \PYGZhy{}\PYGZgt{} (3500, 784)}
+  \PYG{c+c1}{\PYGZsh{} So each row now corresponds to an image}
+  \PYG{n}{X\PYGZus{}processed} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}
+  \PYG{n}{processed\PYGZus{}validData} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{validData}\PYG{p}{,} \PYG{p}{(}\PYG{n}{validData}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}
+
+  \PYG{k}{with} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Session}\PYG{p}{()} \PYG{k}{as} \PYG{n}{sess}\PYG{p}{:}
+    \PYG{n}{sess}\PYG{o}{.}\PYG{n}{run}\PYG{p}{(}\PYG{n}{init\PYGZus{}op}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Starting training...\PYGZdq{}}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Parameters (batch size, learning rate, samples) (\PYGZdq{}}\PYG{p}{,}
+      \PYG{n}{batch\PYGZus{}size}\PYG{p}{,} \PYG{n}{learning\PYGZus{}rate}\PYG{p}{,} \PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{})\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{n}{data\PYGZus{}shuffled} \PYG{o}{=} \PYG{n}{X\PYGZus{}processed}\PYG{o}{.}\PYG{n}{eval}\PYG{p}{(}\PYG{n}{session}\PYG{o}{=}\PYG{n}{sess}\PYG{p}{)}
+    \PYG{n}{label\PYGZus{}shuffled} \PYG{o}{=} \PYG{n}{Y}
+    \PYG{n}{evaled\PYGZus{}validL} \PYG{o}{=} \PYG{n}{validTarget}
+    \PYG{n}{evaled\PYGZus{}validD} \PYG{o}{=} \PYG{n}{processed\PYGZus{}validData}\PYG{o}{.}\PYG{n}{eval}\PYG{p}{(}\PYG{n}{session}\PYG{o}{=}\PYG{n}{sess}\PYG{p}{)}
+
+    \PYG{k}{for} \PYG{n}{itteration} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{epochs}\PYG{p}{):}
+
+      \PYG{c+c1}{\PYGZsh{} Total number of batches is number of instances over batch size}
+      \PYG{n}{total\PYGZus{}batches} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{/} \PYG{n}{batch\PYGZus{}size}\PYG{p}{)}
+
+      \PYG{c+c1}{\PYGZsh{} Generate 3500 random indices so that we can reconstruct X, and Y}
+      \PYG{c+c1}{\PYGZsh{} in a random order, while still maintaing the X \PYGZhy{}\PYGZgt{} Y relation}
+      \PYG{n}{random\PYGZus{}indices} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{permutation}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]))}
+
+      \PYG{n}{data\PYGZus{}batch} \PYG{o}{=} \PYG{n}{data\PYGZus{}shuffled}\PYG{p}{[}\PYG{n}{random\PYGZus{}indices}\PYG{p}{]}
+      \PYG{n}{label\PYGZus{}batch} \PYG{o}{=} \PYG{n}{label\PYGZus{}shuffled}\PYG{p}{[}\PYG{n}{random\PYGZus{}indices}\PYG{p}{]}
+
+      \PYG{n}{batch\PYGZus{}step} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+      \PYG{k}{for} \PYG{n}{items} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{total\PYGZus{}batches}\PYG{p}{):}
+
+        \PYG{c+c1}{\PYGZsh{} On each iteration get a sample of batch\PYGZus{}size images and}
+        \PYG{c+c1}{\PYGZsh{} there associated  Label}
+        \PYG{n}{data\PYGZus{}batch\PYGZus{}np} \PYG{o}{=} \PYG{n}{data\PYGZus{}batch}\PYG{p}{[}\PYG{n}{batch\PYGZus{}step}\PYG{p}{:(}\PYG{n}{batch\PYGZus{}step} \PYG{o}{+} \PYG{n}{batch\PYGZus{}size}\PYG{p}{):]}
+
+        \PYG{n}{label\PYGZus{}batch\PYGZus{}np} \PYG{o}{=} \PYG{n}{label\PYGZus{}batch}\PYG{p}{[}\PYG{n}{batch\PYGZus{}step}\PYG{p}{:(}\PYG{n}{batch\PYGZus{}step} \PYG{o}{+} \PYG{n}{batch\PYGZus{}size}\PYG{p}{):]}
+
+        \PYG{c+c1}{\PYGZsh{} Create a feed dictionary to give tensorflow varibles that}
+        \PYG{c+c1}{\PYGZsh{} will be fed into place holders...}
+        \PYG{n}{feed} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+          \PYG{n}{data} \PYG{p}{:} \PYG{n}{data\PYGZus{}batch\PYGZus{}np}\PYG{p}{,}
+          \PYG{n}{labels} \PYG{p}{:} \PYG{n}{label\PYGZus{}batch\PYGZus{}np}\PYG{p}{,}
+          \PYG{n}{valid\PYGZus{}label} \PYG{p}{:} \PYG{n}{evaled\PYGZus{}validL}\PYG{p}{,}
+          \PYG{n}{valid\PYGZus{}data} \PYG{p}{:}  \PYG{n}{evaled\PYGZus{}validD}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{c+c1}{\PYGZsh{} Run the optimizer}
+        \PYG{n}{ret\PYGZus{}optim}\PYG{p}{,} \PYG{n}{ret\PYGZus{}W}\PYG{p}{,} \PYG{n}{ret\PYGZus{}b}\PYG{p}{,} \PYG{n}{ret\PYGZus{}err}\PYG{p}{,} \PYG{n}{ret\PYGZus{}yhat}\PYG{p}{,} \PYG{n}{ret\PYGZus{}reg}\PYG{p}{,}
+        \PYG{n}{ret\PYGZus{}valid\PYGZus{}ce\PYGZus{}loss} \PYG{o}{=}
+          \PYG{n}{sess}\PYG{o}{.}\PYG{n}{run}\PYG{p}{([}\PYG{n}{optim}\PYG{p}{,} \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{ce\PYGZus{}loss}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{,} \PYG{n}{valid\PYGZus{}ce\PYGZus{}loss}\PYG{p}{],}
+          \PYG{n}{feed\PYGZus{}dict}\PYG{o}{=}\PYG{n}{feed}\PYG{p}{)}
+
+        \PYG{n}{batch\PYGZus{}step} \PYG{o}{+=} \PYG{n}{batch\PYGZus{}size}
+
+      \PYG{c+c1}{\PYGZsh{} Calculate the loss and accuracy...}
+      \PYG{c+c1}{\PYGZsh{} Use the returned predictions y\PYGZus{}hat and compare them}
+      \PYG{c+c1}{\PYGZsh{} to the labelsConvert sign(ret\PYGZus{}yhat)}
+      \PYG{c+c1}{\PYGZsh{} (which is either \PYGZhy{}1, 0, or 1) to 0 or 1}
+      \PYG{n}{predictions} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{sign}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{sign}\PYG{p}{(}\PYG{n}{ret\PYGZus{}yhat}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+      \PYG{n}{predictions} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{predictions}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{dtypes}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+
+      \PYG{n}{results} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{equal}\PYG{p}{(}\PYG{n}{predictions}\PYG{p}{,} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{label\PYGZus{}batch\PYGZus{}np}\PYG{p}{,}
+        \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{dtypes}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{))}
+      \PYG{n}{results} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{results}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{dtypes}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+
+      \PYG{n}{accuracy} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{math}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}mean}\PYG{p}{(}\PYG{n}{results}\PYG{p}{)}\PYG{o}{.}\PYG{n}{eval}\PYG{p}{(}\PYG{n}{session}\PYG{o}{=}\PYG{n}{sess}\PYG{p}{)}
+      \PYG{n}{error} \PYG{o}{=} \PYG{n}{ret\PYGZus{}err}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]}
+
+      \PYG{n}{train\PYGZus{}ERROR}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{error}\PYG{p}{)}
+      \PYG{n}{train\PYGZus{}ACCURACY}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{accuracy}\PYG{p}{)}
+
+      \PYG{c+c1}{\PYGZsh{} Use the returned bias and weights to make a prediction}
+      \PYG{c+c1}{\PYGZsh{} on the validation data, them calculate}
+      \PYG{c+c1}{\PYGZsh{} the error and the accuracy}
+      \PYG{n}{validation\PYGZus{}predictions} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{processed\PYGZus{}validData}\PYG{p}{,}
+       \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{dtypes}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{),} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{ret\PYGZus{}W}\PYG{p}{))} \PYG{o}{+} \PYG{n}{ret\PYGZus{}b}
+      \PYG{n}{validation\PYGZus{}predictions} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{sign}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{sign}\PYG{p}{(}\PYG{n}{validation\PYGZus{}predictions}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+      \PYG{n}{validation\PYGZus{}results} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{equal}\PYG{p}{(}\PYG{n}{validation\PYGZus{}predictions}\PYG{p}{,}
+        \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{validTarget}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{dtypes}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{))}
+      \PYG{n}{validation\PYGZus{}results} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{validation\PYGZus{}results}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{dtypes}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+      \PYG{n}{validation\PYGZus{}results} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{math}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}mean}\PYG{p}{(}\PYG{n}{validation\PYGZus{}results}\PYG{p}{)}
+        \PYG{o}{.}\PYG{n}{eval}\PYG{p}{(}\PYG{n}{session}\PYG{o}{=}\PYG{n}{sess}\PYG{p}{)}
+
+      \PYG{n}{valid\PYGZus{}ACCURACY}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{validation\PYGZus{}results}\PYG{p}{)}
+      \PYG{n}{valid\PYGZus{}ERROR}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{ret\PYGZus{}valid\PYGZus{}ce\PYGZus{}loss}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{])}
+
+    \PYG{k}{return} \PYG{n}{train\PYGZus{}ERROR}\PYG{p}{,} \PYG{n}{train\PYGZus{}ACCURACY}\PYG{p}{,} \PYG{n}{valid\PYGZus{}ERROR}\PYG{p}{,} \PYG{n}{valid\PYGZus{}ACCURACY}
+\end{Verbatim}

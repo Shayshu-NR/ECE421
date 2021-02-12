@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{grad\PYGZus{}loss}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{reg}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} Again reshape the data matrix X}
+  \PYG{n}{W} \PYG{o}{=} \PYG{n}{W}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{*} \PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{l+m+mi}{1}\PYG{p}{)}
+  \PYG{n}{X\PYGZus{}processed} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{p}{(}\PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{*} \PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]))}
+
+  \PYG{c+c1}{\PYGZsh{} Number of elements:}
+  \PYG{n}{N} \PYG{o}{=} \PYG{n}{y}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+
+  \PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat = O(wT * x + b) =\PYGZgt{} O(X * w + b), where X is the data matrix}
+  \PYG{n}{y\PYGZus{}hat} \PYG{o}{=} \PYG{l+m+mf}{1.0} \PYG{o}{/} \PYG{p}{(}\PYG{l+m+mf}{1.0} \PYG{o}{+} \PYG{n}{np}\PYG{o}{.}\PYG{n}{exp}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{X\PYGZus{}processed}\PYG{p}{,} \PYG{n}{W}\PYG{p}{)} \PYG{o}{+} \PYG{n}{b}\PYG{p}{)))}
+
+  \PYG{c+c1}{\PYGZsh{} Gradient with respect to weight}
+  \PYG{n}{grad\PYGZus{}wrt\PYGZus{}w} \PYG{o}{=} \PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{X\PYGZus{}processed}\PYG{p}{),} \PYG{p}{(}\PYG{n}{y\PYGZus{}hat} \PYG{o}{\PYGZhy{}} \PYG{n}{y}\PYG{p}{))} \PYG{o}{/} \PYG{n}{N}\PYG{p}{)}
+    \PYG{o}{+} \PYG{p}{(}\PYG{n}{reg} \PYG{o}{*} \PYG{n}{W}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Gradient with respect to bias}
+  \PYG{n}{grad\PYGZus{}wrt\PYGZus{}b} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{y\PYGZus{}hat} \PYG{o}{\PYGZhy{}} \PYG{n}{y}\PYG{p}{)} \PYG{o}{/} \PYG{n}{N}
+
+  \PYG{k}{return} \PYG{n}{grad\PYGZus{}wrt\PYGZus{}w}\PYG{p}{,} \PYG{n}{grad\PYGZus{}wrt\PYGZus{}b}
+\end{Verbatim}
