@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{newMomentum}\PYG{p}{(}\PYG{n}{vold}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dx}\PYG{p}{,} \PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{n}{gamma}\PYG{o}{=}\PYG{l+m+mf}{0.9}\PYG{p}{):}
+  \PYG{n}{vWh} \PYG{o}{=} \PYG{p}{(}\PYG{n}{gamma} \PYG{o}{*} \PYG{n}{vold}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])} \PYG{o}{+} \PYG{p}{(}\PYG{n}{alpha} \PYG{o}{*} \PYG{n}{dL\PYGZus{}dx}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+  \PYG{n}{vWo} \PYG{o}{=} \PYG{p}{(}\PYG{n}{gamma} \PYG{o}{*} \PYG{n}{vold}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])} \PYG{o}{+} \PYG{p}{(}\PYG{n}{alpha} \PYG{o}{*} \PYG{n}{dL\PYGZus{}dx}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+  \PYG{n}{vbh} \PYG{o}{=} \PYG{p}{(}\PYG{n}{gamma} \PYG{o}{*} \PYG{n}{vold}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{])} \PYG{o}{+} \PYG{p}{(}\PYG{n}{alpha} \PYG{o}{*} \PYG{n}{dL\PYGZus{}dx}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{])}
+  \PYG{n}{vbo} \PYG{o}{=} \PYG{p}{(}\PYG{n}{gamma} \PYG{o}{*} \PYG{n}{vold}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{])} \PYG{o}{+} \PYG{p}{(}\PYG{n}{alpha} \PYG{o}{*} \PYG{n}{dL\PYGZus{}dx}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{])}
+
+  \PYG{k}{return} \PYG{n}{vWh}\PYG{p}{,} \PYG{n}{vWo}\PYG{p}{,} \PYG{n}{vbh}\PYG{p}{,} \PYG{n}{vbo}
+\end{Verbatim}

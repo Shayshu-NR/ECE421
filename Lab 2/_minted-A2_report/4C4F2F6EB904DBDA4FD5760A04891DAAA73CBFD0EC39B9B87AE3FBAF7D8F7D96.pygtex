@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{k}{def} \PYG{n+nf}{relu}\PYG{p}{(}\PYG{n}{x}\PYG{p}{):}
+            \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{maximum}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\end{Verbatim}

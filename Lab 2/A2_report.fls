@@ -1,0 +1,813 @@
+PWD d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2
+INPUT d:/Tex/texlive/2020/texmf.cnf
+INPUT d:/Tex/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT d:/Tex/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.tex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.log
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/article.cls
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/minted/minted.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fvextra/fvextra.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/nul:
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/nul:.tex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/nul:
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/nul:.tex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/nul:.tex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/nul:
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/lineno/lineno.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/float/float.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aex
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aux
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aux
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aux
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aux
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default-pyg-prefix.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/default.pygstyle
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/4C4F2F6EB904DBDA4FD5760A04891DAAA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pdf
+INPUT d:/Tex/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/82E65D83E55E92EA4923E37BF4E83D51A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/527503780AA57479A67A2DB63322237EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/D2C1A3EE4621846A6AFB6858937EF548A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/B69026EC7D9DBC368228C4337514D3BCA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/CD26FFB355EE3ED6422920B1544C6AF7A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/F2A13BB49789A3038D835BB5BD6251ADA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/E85DBE24CB3112AF27E7A216C572CBF5A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/52CFF6FB343260F2DD28937DEA1EADF4A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmitt10.tfm
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/5DC41F35D11D8C8645CC58EAE54A0345A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/05C1AE47C5E17A7263381BFD978F6533A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/AFFE4722D8ADE03B6E666F52959F9555A73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+OUTPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/_minted-A2_report/57DB2E5501DD250B5E07CEDDECB4EE3EA73CBFD0EC39B9B87AE3FBAF7D8F7D96.pygtex
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_acc.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_acc.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_acc.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_acc.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_acc.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_loss.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_loss.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_loss.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_loss.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/images/ANN_loss.png
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.aux
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/OneDrive - University of Toronto/UofT/Skule 2020-2021/Semester 2/ECE421 Introduction to Machine Learning/Labs/Lab 2/A2_report.pyg
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT d:/Tex/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb

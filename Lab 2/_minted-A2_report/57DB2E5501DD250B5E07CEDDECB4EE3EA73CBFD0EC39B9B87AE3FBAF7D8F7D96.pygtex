@@ -1,0 +1,82 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{train}\PYG{p}{(}\PYG{n}{epochs}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{learning\PYGZus{}rate}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{,} \PYG{n}{momentum}\PYG{o}{=}\PYG{l+m+mf}{0.9}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} Get the data and reshape it...}
+  \PYG{n}{trainData}\PYG{p}{,} \PYG{n}{validData}\PYG{p}{,} \PYG{n}{testData}\PYG{p}{,} \PYG{n}{trainTarget}\PYG{p}{,} \PYGZbs{}\PYGZbs{}
+    \PYG{n}{validTarget}\PYG{p}{,} \PYG{n}{testTarget} \PYG{o}{=} \PYG{n}{loadData}\PYG{p}{()}
+
+  \PYG{n}{trainTarget}\PYG{p}{,} \PYG{n}{validTarget}\PYG{p}{,} \PYG{n}{testTarget} \PYGZbs{}\PYGZbs{}
+    \PYG{o}{=} \PYG{n}{convertOneHot}\PYG{p}{(}\PYG{n}{trainTarget}\PYG{p}{,} \PYG{n}{validTarget}\PYG{p}{,} \PYG{n}{testTarget}\PYG{p}{)}
+
+  \PYG{n}{trainData} \PYG{o}{=} \PYG{n}{trainData}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{((}\PYG{n}{trainData}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}
+  \PYG{n}{validData} \PYG{o}{=} \PYG{n}{validData}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{((}\PYG{n}{validData}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}
+  \PYG{n}{testData} \PYG{o}{=} \PYG{n}{testData}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{((}\PYG{n}{testData}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}
+
+  \PYG{c+c1}{\PYGZsh{} Intitialize weights, bias, and descent...}
+  \PYG{n}{bo}\PYG{p}{,} \PYG{n}{bh} \PYG{o}{=} \PYG{n}{initBias}\PYG{p}{([(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{)])}
+  \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo} \PYG{o}{=} \PYG{n}{intiWeights}\PYG{p}{([(}\PYG{l+m+mi}{784}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)])}
+  \PYG{n}{vWh}\PYG{p}{,} \PYG{n}{vWo}\PYG{p}{,} \PYG{n}{vbh}\PYG{p}{,} \PYG{n}{vbo} \PYG{o}{=} \PYGZbs{}\PYGZbs{}
+    \PYG{n}{initMomentum}\PYG{p}{([(}\PYG{l+m+mi}{784}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)],} \PYG{l+m+mf}{1e\PYGZhy{}5}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Loss and accuracy variables...}
+  \PYG{n}{itters} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{train\PYGZus{}loss}\PYG{p}{,} \PYG{n}{val\PYGZus{}loss}\PYG{p}{,} \PYG{n}{test\PYGZus{}loss} \PYG{o}{=} \PYG{p}{[],} \PYG{p}{[],} \PYG{p}{[]}
+  \PYG{n}{train\PYGZus{}acc}\PYG{p}{,} \PYG{n}{val\PYGZus{}acc}\PYG{p}{,} \PYG{n}{test\PYGZus{}acc} \PYG{o}{=} \PYG{p}{[],} \PYG{p}{[],} \PYG{p}{[]}
+
+
+  \PYG{k}{for} \PYG{n}{itteration} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{epochs}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} Compute forward propagation for the training set...}
+    \PYG{n}{s1} \PYG{o}{=} \PYG{n}{compute}\PYG{p}{(}\PYG{n}{trainData}\PYG{p}{,} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{)}
+    \PYG{n}{x1} \PYG{o}{=} \PYG{n}{relu}\PYG{p}{(}\PYG{n}{s1}\PYG{p}{)}
+
+    \PYG{n}{s2} \PYG{o}{=} \PYG{n}{compute}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bo}\PYG{p}{)}
+    \PYG{n}{x2} \PYG{o}{=} \PYG{n}{softmax}\PYG{p}{(}\PYG{n}{s2}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Compute forward propagation for the validation set...}
+    \PYG{n}{val\PYGZus{}s1} \PYG{o}{=} \PYG{n}{compute}\PYG{p}{(}\PYG{n}{validData}\PYG{p}{,} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{)}
+    \PYG{n}{val\PYGZus{}x1} \PYG{o}{=} \PYG{n}{relu}\PYG{p}{(}\PYG{n}{val\PYGZus{}s1}\PYG{p}{)}
+
+    \PYG{n}{val\PYGZus{}s2} \PYG{o}{=} \PYG{n}{compute}\PYG{p}{(}\PYG{n}{val\PYGZus{}x1}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bo}\PYG{p}{)}
+    \PYG{n}{val\PYGZus{}x2} \PYG{o}{=} \PYG{n}{softmax}\PYG{p}{(}\PYG{n}{val\PYGZus{}s2}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Compute forward propagation for the testing set...}
+    \PYG{n}{test\PYGZus{}s1} \PYG{o}{=} \PYG{n}{compute}\PYG{p}{(}\PYG{n}{testData}\PYG{p}{,} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{)}
+    \PYG{n}{test\PYGZus{}x1} \PYG{o}{=} \PYG{n}{relu}\PYG{p}{(}\PYG{n}{test\PYGZus{}s1}\PYG{p}{)}
+
+    \PYG{n}{test\PYGZus{}s2} \PYG{o}{=} \PYG{n}{compute}\PYG{p}{(}\PYG{n}{test\PYGZus{}x1}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bo}\PYG{p}{)}
+    \PYG{n}{test\PYGZus{}x2} \PYG{o}{=} \PYG{n}{softmax}\PYG{p}{(}\PYG{n}{test\PYGZus{}s2}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate the loss and accuracy for the training set...}
+    \PYG{n}{train\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{averageCE}\PYG{p}{(}\PYG{n}{trainTarget}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{))}
+    \PYG{n}{train\PYGZus{}acc}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{accuracy}\PYG{p}{(}\PYG{n}{x2}\PYG{p}{,} \PYG{n}{trainTarget}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate the loss and accuracy for the validation set...}
+    \PYG{n}{val\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{averageCE}\PYG{p}{(}\PYG{n}{validTarget}\PYG{p}{,} \PYG{n}{val\PYGZus{}x2}\PYG{p}{))}
+    \PYG{n}{val\PYGZus{}acc}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{accuracy}\PYG{p}{(}\PYG{n}{val\PYGZus{}x2}\PYG{p}{,} \PYG{n}{validTarget}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate the loss and accuracy for the testing set...}
+    \PYG{n}{test\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{averageCE}\PYG{p}{(}\PYG{n}{testTarget}\PYG{p}{,} \PYG{n}{test\PYGZus{}x2}\PYG{p}{))}
+    \PYG{n}{test\PYGZus{}acc}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{accuracy}\PYG{p}{(}\PYG{n}{test\PYGZus{}x2}\PYG{p}{,} \PYG{n}{testTarget}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Compute back propagation...}
+    \PYG{c+c1}{\PYGZsh{} Use the formulas developed in 1.2 to compute the gradient of}
+    \PYG{c+c1}{\PYGZsh{} the loss function with respect to Wo, bo, Wh, and bh....}
+    \PYG{n}{dL\PYGZus{}dWo}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbo}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dWh}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbh} \PYG{o}{=} \PYGZbs{}\PYGZbs{}
+        \PYG{n}{backProp}\PYG{p}{(}\PYG{n}{trainData}\PYG{p}{,} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{s1}\PYG{p}{,} \PYG{n}{s2}\PYG{p}{,} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{,} \PYG{n}{bo}\PYG{p}{,} \PYG{n}{trainTarget}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Now get the new momentum/descent terms using the}
+    \PYG{c+c1}{\PYGZsh{}  partial derivatives calculated...}
+    \PYG{n}{vWh}\PYG{p}{,} \PYG{n}{vWo}\PYG{p}{,} \PYG{n}{vbh}\PYG{p}{,} \PYG{n}{vbo} \PYG{o}{=} \PYGZbs{}\PYGZbs{}
+        \PYG{n}{newMomentum}\PYG{p}{([}\PYG{n}{vWh}\PYG{p}{,} \PYG{n}{vWo}\PYG{p}{,} \PYG{n}{vbh}\PYG{p}{,} \PYG{n}{vbo}\PYG{p}{],} \PYGZbs{}\PYGZbs{}
+        \PYG{p}{[}\PYG{n}{dL\PYGZus{}dWh}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dWo}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbh}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbo}\PYG{p}{],} \PYGZbs{}\PYGZbs{}
+         \PYG{n}{alpha}\PYG{o}{=}\PYG{n}{learning\PYGZus{}rate}\PYG{p}{,} \PYG{n}{gamma}\PYG{o}{=}\PYG{n}{momentum}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Compute the new values of the weights and bias}
+    \PYG{c+c1}{\PYGZsh{} using gradient descent}
+    \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{,} \PYG{n}{bo} \PYG{o}{=} \PYGZbs{}\PYGZbs{}
+        \PYG{n}{gradientDescent}\PYG{p}{(}\PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{,} \PYG{n}{bo}\PYG{p}{,} \PYG{n}{vWh}\PYG{p}{,} \PYG{n}{vWo}\PYG{p}{,} \PYG{n}{vbh}\PYG{p}{,} \PYG{n}{vbo}\PYG{p}{)}
+
+    \PYG{n}{itters}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{itteration}\PYG{p}{)}
+
+  \PYG{k}{return} \PYG{n}{train\PYGZus{}loss}\PYG{p}{,} \PYG{n}{val\PYGZus{}loss}\PYG{p}{,} \PYG{n}{test\PYGZus{}loss}\PYG{p}{,} \PYG{n}{train\PYGZus{}acc}\PYG{p}{,} \PYGZbs{}\PYGZbs{}
+    \PYG{n}{val\PYGZus{}acc}\PYG{p}{,} \PYG{n}{test\PYGZus{}acc}\PYG{p}{,} \PYG{n}{itters}
+\end{Verbatim}

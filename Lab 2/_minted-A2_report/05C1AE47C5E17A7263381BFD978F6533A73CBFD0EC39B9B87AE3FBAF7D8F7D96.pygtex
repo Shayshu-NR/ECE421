@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{gradientDescent}\PYG{p}{(}\PYG{n}{Wh\PYGZus{}old}\PYG{p}{,} \PYG{n}{Wo\PYGZus{}old}\PYG{p}{,} \PYG{n}{bh\PYGZus{}old}\PYG{p}{,} \PYG{n}{bo\PYGZus{}old}\PYG{p}{,} \PYG{n}{vWh}\PYG{p}{,} \PYG{n}{vWo}\PYG{p}{,} \PYG{n}{vbh}\PYG{p}{,} \PYG{n}{vbo}\PYG{p}{):}
+  \PYG{n}{Wh} \PYG{o}{=} \PYG{n}{Wh\PYGZus{}old} \PYG{o}{\PYGZhy{}} \PYG{n}{vWh}
+  \PYG{n}{Wo} \PYG{o}{=} \PYG{n}{Wo\PYGZus{}old} \PYG{o}{\PYGZhy{}} \PYG{n}{vWo}
+  \PYG{n}{bh} \PYG{o}{=} \PYG{n}{bh\PYGZus{}old} \PYG{o}{\PYGZhy{}} \PYG{n}{vbh}
+  \PYG{n}{bo} \PYG{o}{=} \PYG{n}{bo\PYGZus{}old} \PYG{o}{\PYGZhy{}} \PYG{n}{vbo}
+
+  \PYG{k}{return} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{,} \PYG{n}{bo}
+\end{Verbatim}

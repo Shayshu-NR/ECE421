@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{intiWeights}\PYG{p}{(}\PYG{n}{sizes}\PYG{p}{):}
+  \PYG{n}{scale\PYGZus{}1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{((}\PYG{l+m+mf}{2.0} \PYG{o}{/} \PYG{p}{(}\PYG{n}{sizes}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{+} \PYG{n}{sizes}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{])))}
+  \PYG{n}{scale\PYGZus{}2} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{((}\PYG{l+m+mf}{2.0} \PYG{o}{/} \PYG{p}{(}\PYG{n}{sizes}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{+} \PYG{n}{sizes}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{])))}
+
+  \PYG{n}{Wh} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{normal}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{n}{scale}\PYG{o}{=}\PYG{n}{scale\PYGZus{}1}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{n}{sizes}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+  \PYG{n}{Wo} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{normal}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{n}{scale}\PYG{o}{=}\PYG{n}{scale\PYGZus{}2}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{n}{sizes}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+  \PYG{k}{return} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo}
+\end{Verbatim}

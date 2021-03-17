@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{backProp}\PYG{p}{(}\PYG{n}{x0}\PYG{p}{,} \PYG{n}{x1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{s1}\PYG{p}{,} \PYG{n}{s2}\PYG{p}{,} \PYG{n}{Wh}\PYG{p}{,} \PYG{n}{Wo}\PYG{p}{,} \PYG{n}{bh}\PYG{p}{,} \PYG{n}{bo}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} dl\PYGZus{}do = softmax(s2) \PYGZhy{} y}
+  \PYG{n}{dL\PYGZus{}do} \PYG{o}{=} \PYG{p}{(} \PYG{l+m+mf}{1.0}\PYG{o}{/} \PYG{l+m+mi}{10000} \PYG{p}{)} \PYG{o}{*} \PYG{n}{gradCE}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{s2}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} \PYGZsh{} dL\PYGZus{}dWo = x2\PYGZca{}T * (softmax(s2) \PYGZhy{} y)}
+  \PYG{n}{dL\PYGZus{}dWo} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{s1}\PYG{p}{),} \PYG{n}{dL\PYGZus{}do}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} dL\PYGZus{}dbo = (softmax(s2) \PYGZhy{} y) but in the right shape...}
+  \PYG{n}{dL\PYGZus{}dbo} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{((}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{y}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])),} \PYG{n}{dL\PYGZus{}do}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} dL\PYGZus{}dWh = x0 * pw(Relu) *(softmax(s2) \PYGZhy{} y) * W\PYGZca{}T}
+  \PYG{n}{ds1\PYGZus{}dx1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{n}{s1} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+  \PYG{n}{dL\PYGZus{}dWh} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{dL\PYGZus{}do}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{Wo}\PYG{p}{))}
+  \PYG{n}{dL\PYGZus{}dWh} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{x0}\PYG{p}{),} \PYG{n}{ds1\PYGZus{}dx1} \PYG{o}{*} \PYG{n}{dL\PYGZus{}dWh}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} dL\PYGZus{}dbh = pw(Relu) * (softmax(s2) \PYGZhy{} y) * W\PYGZca{}T}
+  \PYG{n}{dL\PYGZus{}dbh} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{dL\PYGZus{}do}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{Wo}\PYG{p}{))}
+  \PYG{n}{dL\PYGZus{}dbh} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{n}{s1} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbh}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+  \PYG{n}{dL\PYGZus{}dbh} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matmul}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{((}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{s1}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])),} \PYG{n}{dL\PYGZus{}dbh}\PYG{p}{)}
+
+  \PYG{k}{return} \PYG{n}{dL\PYGZus{}dWo}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbo}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dWh}\PYG{p}{,} \PYG{n}{dL\PYGZus{}dbh}
+\end{Verbatim}

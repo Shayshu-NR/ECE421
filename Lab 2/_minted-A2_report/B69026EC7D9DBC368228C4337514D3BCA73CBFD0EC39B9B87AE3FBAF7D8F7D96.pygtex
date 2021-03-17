@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{k}{def} \PYG{n+nf}{gradCE}\PYG{p}{(}\PYG{n}{targets}\PYG{p}{,} \PYG{n+nb}{input}\PYG{p}{):}
+            \PYG{k}{return} \PYG{n}{softmax}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{targets}
+\end{Verbatim}
