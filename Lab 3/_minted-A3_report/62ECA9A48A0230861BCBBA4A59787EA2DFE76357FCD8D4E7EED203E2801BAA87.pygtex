@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{sampleColours}\PYG{p}{(}\PYG{n}{sample\PYGZus{}points}\PYG{p}{,} \PYG{n}{centers}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} For each sample find the closest center}
+  \PYG{c+c1}{\PYGZsh{} and then assign it a colour...}
+  \PYG{n}{closest} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{arg\PYGZus{}min}\PYG{p}{(}\PYG{n}{distanceFunc}\PYG{p}{(}\PYG{n}{sample\PYGZus{}points}\PYG{p}{,} \PYG{n}{centers}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{)}
+  \PYG{k}{return} \PYG{n}{closest}
+\end{Verbatim}

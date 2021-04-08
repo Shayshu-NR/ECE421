@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{log\PYGZus{}GaussPDF}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{mu}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} Inputs}
+  \PYG{c+c1}{\PYGZsh{} X: N X D}
+  \PYG{c+c1}{\PYGZsh{} mu: K X D}
+  \PYG{c+c1}{\PYGZsh{} sigma: K X 1}
+
+  \PYG{c+c1}{\PYGZsh{} Outputs:}
+  \PYG{c+c1}{\PYGZsh{} log Gaussian PDF N X K}
+
+  \PYG{c+c1}{\PYGZsh{} Recall pdf of gaussian:}
+  \PYG{c+c1}{\PYGZsh{} pdf(x; mu, sigma) = exp(\PYGZhy{}0.5 (x \PYGZhy{} mu)**2 / sigma**2) / Z}
+  \PYG{c+c1}{\PYGZsh{} Z = (2 pi sigma**2)**0.5}
+  \PYG{c+c1}{\PYGZsh{} log(pdf) = (\PYGZhy{}0.5 (x \PYGZhy{} mu)**2 / sigma ** 2) \PYGZhy{} log(Z)}
+
+  \PYG{n}{data\PYGZus{}dim} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+  \PYG{n}{Z} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{square}\PYG{p}{(}\PYG{n}{sigma}\PYG{p}{))}
+  \PYG{n}{Z} \PYG{o}{=} \PYG{p}{(}\PYG{n}{data\PYGZus{}dim}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{n}{Z}\PYG{p}{)}
+  \PYG{n}{pdf} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5} \PYG{o}{*} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{divide}\PYG{p}{(}\PYG{n}{distanceFunc}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{mu}\PYG{p}{),} \PYGZbs{}
+      \PYG{n}{tf}\PYG{o}{.}\PYG{n}{squeeze}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{square}\PYG{p}{(}\PYG{n}{sigma}\PYG{p}{)))}
+
+  \PYG{n}{log\PYGZus{}gauss} \PYG{o}{=} \PYG{n}{pdf} \PYG{o}{\PYGZhy{}} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{Z}\PYG{p}{)}
+  \PYG{k}{return} \PYG{n}{log\PYGZus{}gauss}
+\end{Verbatim}

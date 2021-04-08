@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{log\PYGZus{}posterior}\PYG{p}{(}\PYG{n}{log\PYGZus{}PDF}\PYG{p}{,} \PYG{n}{log\PYGZus{}pi}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} Input}
+  \PYG{c+c1}{\PYGZsh{} log\PYGZus{}PDF: log Gaussian PDF N X K}
+  \PYG{c+c1}{\PYGZsh{} log\PYGZus{}pi: K X 1}
+
+  \PYG{c+c1}{\PYGZsh{} Outputs}
+  \PYG{c+c1}{\PYGZsh{} log\PYGZus{}post: N X K}
+
+  \PYG{c+c1}{\PYGZsh{} log[P(z | x)] = log[P(x | z)] + log[P(z)] \PYGZhy{}}
+  \PYG{c+c1}{\PYGZsh{}                 log[Sum\PYGZus{}1\PYGZus{}N\PYGZob{}exp(log[P(x | z)] + log[P(z)])\PYGZcb{}]}
+
+  \PYG{n}{log\PYGZus{}post\PYGZus{}num} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{log\PYGZus{}PDF}\PYG{p}{,} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{n}{log\PYGZus{}pi}\PYG{p}{))}
+  \PYG{n}{log\PYGZus{}post\PYGZus{}dem} \PYG{o}{=} \PYG{n}{reduce\PYGZus{}logsumexp}\PYG{p}{(}\PYG{n}{log\PYGZus{}PDF} \PYG{o}{+} \PYG{n}{log\PYGZus{}pi}\PYG{p}{,} \PYG{n}{keep\PYGZus{}dims}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+
+  \PYG{k}{return} \PYG{n}{log\PYGZus{}post\PYGZus{}num} \PYG{o}{\PYGZhy{}} \PYG{n}{log\PYGZus{}post\PYGZus{}dem}
+\end{Verbatim}

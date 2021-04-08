@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{buildGraphGMM}\PYG{p}{(}\PYG{n}{data}\PYG{p}{,} \PYG{n}{data\PYGZus{}dim}\PYG{p}{,} \PYG{n}{K}\PYG{p}{,} \PYG{n}{lr}\PYG{p}{,} \PYG{n}{div}\PYG{p}{):}
+  \PYG{n}{data\PYGZus{}points} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{placeholder}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{,} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{data\PYGZus{}dim}\PYG{p}{),} \PYGZbs{}
+      \PYG{n}{name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Initialize the cluster centers based on a random sample of}
+  \PYG{c+c1}{\PYGZsh{} data points in the set..}
+  \PYG{n}{centers} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Variable}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{cast}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{slice}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{random\PYGZus{}shuffle}\PYG{p}{(}\PYG{n}{data}\PYG{p}{),} \PYGZbs{}
+  \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{],} \PYG{p}{(}\PYG{n}{K}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)),} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{),} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Initialize the standard deviation of each function}
+  \PYG{c+c1}{\PYGZsh{} to be a random sample from a gaussian distribution}
+  \PYG{c+c1}{\PYGZsh{} Make it exponential to deal with constraint...}
+  \PYG{n}{sigma} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Variable}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{random\PYGZus{}normal}\PYG{p}{((}\PYG{n}{K}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{stddev}\PYG{o}{=} \PYG{n}{div}\PYG{p}{),} \PYGZbs{}
+      \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+  \PYG{n}{sigma} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{exp}\PYG{p}{(}\PYG{n}{sigma}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} The weights of each distribution}
+  \PYG{c+c1}{\PYGZsh{} But again because we\PYGZsq{}re using exp sigma, we need to change}
+  \PYG{c+c1}{\PYGZsh{} pi\PYGZus{}k to be represented by a softmax function}
+  \PYG{n}{pi} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Variable}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{random\PYGZus{}normal}\PYG{p}{((}\PYG{n}{K}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{stddev}\PYG{o}{=} \PYG{n}{div}\PYG{p}{),} \PYGZbs{}
+      \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{float32}\PYG{p}{)}
+  \PYG{n}{pi} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{squeeze}\PYG{p}{(}\PYG{n}{logsoftmax}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{))}
+
+  \PYG{c+c1}{\PYGZsh{} Loss = \PYGZhy{}log[P(X)]}
+  \PYG{c+c1}{\PYGZsh{}      = \PYGZhy{}log[[pi\PYGZus{}1\PYGZus{}N\PYGZob{}P(x\PYGZus{}n)\PYGZcb{}]}
+  \PYG{c+c1}{\PYGZsh{}      = \PYGZhy{}log[Pi\PYGZus{}1\PYGZus{}N\PYGZob{}Sum\PYGZus{}1\PYGZus{}K\PYGZob{}Pi\PYGZus{}k N(x\PYGZus{}n)\PYGZcb{}\PYGZcb{}]}
+  \PYG{c+c1}{\PYGZsh{}      = \PYGZhy{}log[Pi\PYGZus{}1\PYGZus{}N\PYGZob{}Sum\PYGZus{}1\PYGZus{}K\PYGZob{}e \PYGZca{} (log[Pi\PYGZus{}k] + log[N(x\PYGZus{}n)])\PYGZcb{}\PYGZcb{}]}
+  \PYG{c+c1}{\PYGZsh{}      = \PYGZhy{}log[Pi\PYGZus{}1\PYGZus{}K\PYGZob{}e \PYGZca{} (log[Pi\PYGZus{}k] + log[N(x\PYGZus{}1)])\PYGZcb{}] \PYGZhy{} ...}
+  \PYG{c+c1}{\PYGZsh{}        \PYGZhy{}log[Pi\PYGZus{}1\PYGZus{}K\PYGZob{}e \PYGZca{} (log[Pi\PYGZus{}k] + log[N(x\PYGZus{}N)])\PYGZcb{}]}
+  \PYG{n}{log\PYGZus{}pdf} \PYG{o}{=} \PYG{n}{log\PYGZus{}GaussPDF}\PYG{p}{(}\PYG{n}{data\PYGZus{}points}\PYG{p}{,} \PYG{n}{centers}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{)}
+  \PYG{n}{loss} \PYG{o}{=} \PYG{n}{reduce\PYGZus{}logsumexp}\PYG{p}{(}\PYG{n}{log\PYGZus{}pdf} \PYG{o}{+} \PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{keep\PYGZus{}dims}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+  \PYG{n}{loss} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{reduce\PYGZus{}sum}\PYG{p}{(}\PYG{n}{loss}\PYG{p}{)}
+
+  \PYG{n}{optim} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{train}\PYG{o}{.}\PYG{n}{AdamOptimizer}\PYG{p}{(}\PYG{n}{learning\PYGZus{}rate}\PYG{o}{=}\PYG{n}{lr}\PYG{p}{,} \PYGZbs{}
+      \PYG{n}{beta1}\PYG{o}{=}\PYG{l+m+mf}{0.9}\PYG{p}{,} \PYG{n}{beta2}\PYG{o}{=}\PYG{l+m+mf}{0.99}\PYG{p}{,} \PYG{n}{epsilon}\PYG{o}{=}\PYG{l+m+mf}{1e\PYGZhy{}5}\PYG{p}{)}
+  \PYG{n}{optim} \PYG{o}{=} \PYG{n}{optim}\PYG{o}{.}\PYG{n}{minimize}\PYG{p}{(}\PYG{n}{loss}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} Based on the distributions make a prediction as to which}
+  \PYG{c+c1}{\PYGZsh{} cluster a data point belongs too}
+  \PYG{n}{classify} \PYG{o}{=} \PYG{n}{log\PYGZus{}posterior}\PYG{p}{(}\PYG{n}{log\PYGZus{}pdf}\PYG{p}{,} \PYG{n}{pi}\PYG{p}{)}
+  \PYG{n}{classify} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{nn}\PYG{o}{.}\PYG{n}{softmax}\PYG{p}{(}\PYG{n}{classify}\PYG{p}{)}
+  \PYG{n}{classify} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{classify}\PYG{p}{,} \PYG{n}{axis} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+  \PYG{k}{return} \PYG{n}{data\PYGZus{}points}\PYG{p}{,} \PYG{n}{centers}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{n}{pi}\PYG{p}{,} \PYG{n}{optim}\PYG{p}{,} \PYG{n}{loss}\PYG{p}{,} \PYG{n}{classify}
+\end{Verbatim}

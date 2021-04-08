@@ -1,0 +1,71 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{GMM}\PYG{p}{(}\PYG{n}{K}\PYG{p}{,} \PYG{n}{lr}\PYG{p}{,} \PYG{n}{stddve}\PYG{p}{,} \PYG{n}{is\PYGZus{}valid} \PYG{o}{=} \PYG{k+kc}{False}\PYG{p}{,} \PYG{n}{epochs}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{plot}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{npy}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{):}
+  \PYG{n}{train\PYGZus{}loss} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{val\PYGZus{}loss} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{n}{train\PYGZus{}cluster} \PYG{o}{=} \PYG{p}{[]}
+
+  \PYG{c+c1}{\PYGZsh{} Loading data}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{npy} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{):}
+    \PYG{n}{data} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{load}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}data2D.npy\PYGZsq{}}\PYG{p}{)}
+  \PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{data} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{load}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}data100D.npy\PYGZsq{}}\PYG{p}{)}
+
+  \PYG{p}{[}\PYG{n}{num\PYGZus{}pts}\PYG{p}{,} \PYG{n}{dim}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+
+  \PYG{c+c1}{\PYGZsh{} For Validation set}
+  \PYG{k}{if} \PYG{n}{is\PYGZus{}valid}\PYG{p}{:}
+    \PYG{n}{valid\PYGZus{}batch} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{num\PYGZus{}pts} \PYG{o}{/} \PYG{l+m+mf}{3.0}\PYG{p}{)}
+    \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{seed}\PYG{p}{(}\PYG{l+m+mi}{45689}\PYG{p}{)}
+    \PYG{n}{rnd\PYGZus{}idx} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{n}{num\PYGZus{}pts}\PYG{p}{)}
+    \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{shuffle}\PYG{p}{(}\PYG{n}{rnd\PYGZus{}idx}\PYG{p}{)}
+    \PYG{n}{val\PYGZus{}data} \PYG{o}{=} \PYG{n}{data}\PYG{p}{[}\PYG{n}{rnd\PYGZus{}idx}\PYG{p}{[:}\PYG{n}{valid\PYGZus{}batch}\PYG{p}{]]}
+    \PYG{n}{data} \PYG{o}{=} \PYG{n}{data}\PYG{p}{[}\PYG{n}{rnd\PYGZus{}idx}\PYG{p}{[}\PYG{n}{valid\PYGZus{}batch}\PYG{p}{:]]}
+
+  \PYG{n}{X}\PYG{p}{,} \PYG{n}{MU}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{n}{pi}\PYG{p}{,} \PYG{n}{optim}\PYG{p}{,} \PYG{n}{loss}\PYG{p}{,} \PYG{n}{classify} \PYG{o}{=} \PYGZbs{}
+      \PYG{n}{buildGraphGMM}\PYG{p}{(}\PYG{n}{data}\PYG{p}{,} \PYG{n}{dim}\PYG{p}{,} \PYG{n}{K}\PYG{p}{,} \PYG{n}{lr}\PYG{p}{,} \PYG{n}{stddve}\PYG{p}{)}
+
+  \PYG{n}{init\PYGZus{}op} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{global\PYGZus{}variables\PYGZus{}initializer}\PYG{p}{()}
+  \PYG{n}{tf}\PYG{o}{.}\PYG{n}{set\PYGZus{}random\PYGZus{}seed}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
+
+  \PYG{k}{with} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{Session}\PYG{p}{()} \PYG{k}{as} \PYG{n}{sess}\PYG{p}{:}
+    \PYG{n}{sess}\PYG{o}{.}\PYG{n}{run}\PYG{p}{(}\PYG{n}{init\PYGZus{}op}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Starting GMM...\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{n}{feed} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+      \PYG{n}{X} \PYG{p}{:} \PYG{n}{data}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k}{for} \PYG{n}{itteration} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{epochs}\PYG{p}{):}
+      \PYG{n}{centers}\PYG{p}{,} \PYG{n}{losses}\PYG{p}{,} \PYG{n}{cluster\PYGZus{}assign}\PYG{p}{,} \PYG{n}{\PYGZus{}} \PYG{o}{=} \PYGZbs{}
+          \PYG{n}{sess}\PYG{o}{.}\PYG{n}{run}\PYG{p}{([}\PYG{n}{MU}\PYG{p}{,} \PYG{n}{loss}\PYG{p}{,} \PYG{n}{classify}\PYG{p}{,} \PYG{n}{optim}\PYG{p}{],} \PYGZbs{}
+          \PYG{n}{feed\PYGZus{}dict} \PYG{o}{=} \PYG{n}{feed}\PYG{p}{)}
+
+      \PYG{n}{train\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{losses} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{data}\PYG{p}{))}
+      \PYG{n}{train\PYGZus{}cluster}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{cluster\PYGZus{}assign}\PYG{p}{)}
+
+      \PYG{k}{if} \PYG{n}{is\PYGZus{}valid}\PYG{p}{:}
+        \PYG{n}{valid\PYGZus{}center}\PYG{p}{,} \PYG{n}{valid\PYGZus{}loss}\PYG{p}{,} \PYG{n}{\PYGZus{}c}\PYG{p}{,} \PYG{n}{\PYGZus{}o} \PYG{o}{=} \PYGZbs{}
+          \PYG{n}{sess}\PYG{o}{.}\PYG{n}{run}\PYG{p}{([}\PYG{n}{MU}\PYG{p}{,} \PYG{n}{loss}\PYG{p}{,} \PYG{n}{classify}\PYG{p}{,} \PYG{n}{optim}\PYG{p}{],} \PYGZbs{}
+          \PYG{n}{feed\PYGZus{}dict} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{X} \PYG{p}{:} \PYG{n}{val\PYGZus{}data}\PYG{p}{\PYGZcb{})}
+        \PYG{n}{val\PYGZus{}loss}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{valid\PYGZus{}loss} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{val\PYGZus{}data}\PYG{p}{))}
+
+    \PYG{c+c1}{\PYGZsh{} Create scatter plot}
+    \PYG{n}{cluster\PYGZus{}data} \PYG{o}{=} \PYG{p}{[]}
+
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{K}\PYG{p}{):}
+      \PYG{n}{cluster\PYGZus{}data}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{data}\PYG{p}{[}\PYG{n}{cluster\PYGZus{}assign} \PYG{o}{==} \PYG{n}{i}\PYG{p}{])}
+
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{plot}\PYG{p}{):}
+    \PYG{n}{min\PYGZus{}loss} \PYG{o}{=} \PYG{n+nb}{round}\PYG{p}{(}\PYG{n}{val\PYGZus{}loss}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{argmin}\PYG{p}{(}\PYG{n}{val\PYGZus{}loss}\PYG{p}{)],} \PYG{l+m+mi}{4}\PYG{p}{)}
+
+    \PYG{n}{plotScatter}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}GMM Clustering\PYGZdq{}}\PYG{p}{,} \PYG{n}{cluster\PYGZus{}data}\PYG{p}{,} \PYG{n}{centers}\PYG{p}{,} \PYG{n}{K}\PYG{p}{,} \PYGZbs{}
+      \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{data}\PYG{p}{),} \PYG{n}{cluster\PYGZus{}assign}\PYG{p}{,} \PYG{n}{min\PYGZus{}loss}\PYG{p}{)}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}GMM loss\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{train\PYGZus{}loss}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Training loss\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{val\PYGZus{}loss}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Validation loss\PYGZdq{}}\PYG{p}{)}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+
+  \PYG{k}{return} \PYG{n}{train\PYGZus{}loss}\PYG{p}{,} \PYG{n}{val\PYGZus{}loss}
+\end{Verbatim}

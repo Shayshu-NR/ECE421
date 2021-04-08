@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{plotScatter}\PYG{p}{(}\PYG{n}{title}\PYG{p}{,} \PYG{n}{sample\PYGZus{}points}\PYG{p}{,} \PYG{n}{centers}\PYG{p}{,} \PYG{n}{K}\PYG{p}{,} \PYG{n}{size}\PYG{p}{,} \PYGZbs{}
+  \PYG{n}{assign}\PYG{p}{,} \PYG{n}{min\PYGZus{}val\PYGZus{}loss}\PYG{p}{):}
+
+  \PYG{n}{frequency} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{bincount}\PYG{p}{(}\PYG{n}{assign}\PYG{p}{)}
+  \PYG{n}{index} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{nonzero}\PYG{p}{(}\PYG{n}{frequency}\PYG{p}{)[}\PYG{l+m+mi}{0}\PYG{p}{]}
+  \PYG{n}{frequency} \PYG{o}{=} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{index}\PYG{p}{,} \PYG{n}{frequency}\PYG{p}{[}\PYG{n}{index}\PYG{p}{])}
+
+  \PYG{n+nb}{iter} \PYG{o}{=} \PYG{l+m+mi}{1}
+  \PYG{n}{percentages} \PYG{o}{=} \PYG{p}{[]}
+  \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n}{frequency}\PYG{p}{:}
+    \PYG{n}{percentages}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Cluster \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{i}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}} \PYG{o}{+} \PYGZbs{}
+      \PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb}{round}\PYG{p}{((}\PYG{n}{i}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{assign}\PYG{p}{))} \PYG{o}{*} \PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{))} \PYG{o}{+}  \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{)}
+    \PYG{n+nb}{iter} \PYG{o}{+=} \PYG{l+m+mi}{1}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{n}{title}\PYG{p}{)}
+
+  \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{K}\PYG{p}{):}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{sample\PYGZus{}points}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,} \PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{sample\PYGZus{}points}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,} \PYG{l+m+mi}{1}\PYG{p}{],} \PYGZbs{}
+      \PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{s}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{label} \PYG{o}{=} \PYG{n}{percentages}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{centers}\PYG{p}{[:,} \PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{centers}\PYG{p}{[:,} \PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{marker}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{,} \PYGZbs{}
+      \PYG{n}{s} \PYG{o}{=} \PYG{l+m+mi}{50}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}black\PYGZsq{}}\PYG{p}{)}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{text}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.5}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Validation loss: \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{min\PYGZus{}val\PYGZus{}loss}\PYG{p}{),} \PYGZbs{}
+      \PYG{n}{ha}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}center\PYGZsq{}}\PYG{p}{)}
+
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+  \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+  \PYG{k}{return}
+\end{Verbatim}
